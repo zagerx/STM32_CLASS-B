@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for X-CUBE-CLASSB-G4 Project</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for-x-cube-classb-g4-project"><small>Release Notes for </small> <mark>X-CUBE-CLASSB-G4 Project</mark></h1>
+<h1 id="expansion-package-of-stm32cube-for-stm32g4-mcus"><small>Expansion package of STM32Cube for STM32G4 MCUs</small></h1>
+<p>Copyright © 2023 STMicroelectronics<br />
+</p>
+<a href="https://www.st.com" class="logo"><img src="./_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<h1 id="purpose">Purpose</h1>
+<p>The projects are a set of applicative tasks that aim to explain and provide use cases of the different products features based on the products hardware (Boards, STM32 Core(s) features, interconnections and peripherals) and built around the different firmware components. They can be directly used or adapted by the STM32CubeG4 Firmware Package users. They provide basic functionalities, show main features or demonstrate performance. They are provided with preconfigured projects for the main supported toolchains.</p>
+<p>In the STM32CubeG4 X-CUBE-CLASSB Package, the projects are organized in a sequential scheme based on the following levels:</p>
+<ul>
+<li>Boards : Hardware platform with one nucleo board</li>
+<li>Project Category:
+<ul>
+<li>Applications</li>
+</ul></li>
+</ul>
+<p>The Project Class refers to the main peripherals (drivers), middleware libraries or BSP classes while the project Subclass stands for a project specific feature within a class.</p>
+<p>The exhaustive list of projects is provided hereafter.</p>
+</div>
+<div class="col-sm-12 col-lg-8">
+<h1 id="update-history">Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" checked aria-hidden="true"> <label for="collapse-section3" aria-hidden="true"><strong>V4.0.0 / 29-June-2023</strong></label>
+<div>
+<h2 id="main-changes">Main Changes</h2>
+<p>First release of the library based on precompiled object code format</p>
+<h2 id="contents">Contents</h2>
+<p>X-CUBE-CLASSB-G4 project supporting STM32G4 Series.</p>
+<h2 id="projects">Projects</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Board</th>
+<th style="text-align: left;">Project category</th>
+<th style="text-align: left;">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">NUCLEO-G474RE</td>
+<td style="text-align: left;">Applications</td>
+<td style="text-align: left;">Projects\NUCLEO-G474RE\Applications</td>
+</tr>
+</tbody>
+</table>
+<h2 id="applications-details">Applications details</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Module Name</th>
+<th style="text-align: left;">Project name</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">STL</td>
+<td style="text-align: left;">STL_Single_Tests</td>
+<td style="text-align: left;">This application demonstrates STL for single tests (use of single tests APIs)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-devices-and-boards">Supported Devices and boards</h2>
+<ul>
+<li>NUCLEO-G474RE Nucleo board MB1367 Rev C</li>
+</ul>
+<h2 id="known-limitations">Known Limitations</h2>
+<ul>
+<li>None</li>
+</ul>
+<h2 id="backward-compatibility">Backward Compatibility</h2>
+<ul>
+<li>Not applicable</li>
+</ul>
+<h2 id="ide-compatibility">IDE Compatibility</h2>
+<ul>
+<li><p><strong>IAR</strong> 9.20.1 and probably upper versions up to IAR correction: when launching debug, IAR crashes with Safety project using post-build script. A workaround is to go to Tools menu, option, then in Project set Never for “Make before debugging”</p></li>
+<li><p><strong>STM32CubeIDE</strong>: In Project, Settings, Build steps, add a Pre-Build steps command line with rm -f ${BuildArtifactFileBaseName}.elf</p></li>
+<li><p><strong>Arm/Keil</strong>:</p>
+<ul>
+<li>If “Use default compiler version 6” in Target windows of project option is selected, untick “short enums/wchar” in C/C++(AC6) windows.</li>
+<li>If “Use default compiler version 5” is selected, add the flag –wchar32 in “Misc Controls” in C/C++ windows of the project</li>
+</ul></li>
+<li><p><strong>Arm/keil</strong>: when “Debug information” is selected in Output windows of project option, a warning appears (Warning: L6775W). This warning message is only a debug information issue. It doesn’t effect the actual project at all. So it would be safe to ignore this warning</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<footer class="sticky">
+<p>For complete documentation on STM32G4,visit: <a href="http://www.st.com/stm32g4">www.st.com/stm32g4</a>; <a href="https://www.st.com/en/microcontrollers-microprocessors.html">www.st.com/STM32</a></p>
+This release note uses up to date web standards and, for this reason, should not be opened with Internet Explorer but preferably with popular browsers such as Google Chrome, Mozilla Firefox, Opera or Microsoft Edge.
+</footer>
+</body>
+</html>
