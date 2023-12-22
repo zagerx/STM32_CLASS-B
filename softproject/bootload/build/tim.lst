@@ -1,0 +1,424 @@
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"tim.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MX_TIM16_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_TIM16_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_TIM16_Init:
+  27              	.LFB132:
+  28              		.file 1 "Src/tim.c"
+   1:Src/tim.c     **** /* USER CODE BEGIN Header */
+   2:Src/tim.c     **** /**
+   3:Src/tim.c     ****   ******************************************************************************
+   4:Src/tim.c     ****   * @file    tim.c
+   5:Src/tim.c     ****   * @brief   This file provides code for the configuration
+   6:Src/tim.c     ****   *          of the TIM instances.
+   7:Src/tim.c     ****   ******************************************************************************
+   8:Src/tim.c     ****   * @attention
+   9:Src/tim.c     ****   *
+  10:Src/tim.c     ****   * Copyright (c) 2023 STMicroelectronics.
+  11:Src/tim.c     ****   * All rights reserved.
+  12:Src/tim.c     ****   *
+  13:Src/tim.c     ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Src/tim.c     ****   * in the root directory of this software component.
+  15:Src/tim.c     ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Src/tim.c     ****   *
+  17:Src/tim.c     ****   ******************************************************************************
+  18:Src/tim.c     ****   */
+  19:Src/tim.c     **** /* USER CODE END Header */
+  20:Src/tim.c     **** /* Includes ------------------------------------------------------------------*/
+  21:Src/tim.c     **** #include "tim.h"
+  22:Src/tim.c     **** 
+  23:Src/tim.c     **** /* USER CODE BEGIN 0 */
+  24:Src/tim.c     **** 
+  25:Src/tim.c     **** /* USER CODE END 0 */
+  26:Src/tim.c     **** 
+  27:Src/tim.c     **** TIM_HandleTypeDef htim16;
+  28:Src/tim.c     **** 
+  29:Src/tim.c     **** /* TIM16 init function */
+  30:Src/tim.c     **** void MX_TIM16_Init(void)
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 2
+
+
+  31:Src/tim.c     **** {
+  29              		.loc 1 31 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 16
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 85B0     		sub	sp, sp, #20
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 24
+  32:Src/tim.c     **** 
+  33:Src/tim.c     ****   /* USER CODE BEGIN TIM16_Init 0 */
+  34:Src/tim.c     **** 
+  35:Src/tim.c     ****   /* USER CODE END TIM16_Init 0 */
+  36:Src/tim.c     **** 
+  37:Src/tim.c     ****   TIM_IC_InitTypeDef sConfigIC = {0};
+  40              		.loc 1 37 3 view .LVU1
+  41              		.loc 1 37 22 is_stmt 0 view .LVU2
+  42 0004 0023     		movs	r3, #0
+  43 0006 0093     		str	r3, [sp]
+  44 0008 0193     		str	r3, [sp, #4]
+  45 000a 0293     		str	r3, [sp, #8]
+  46 000c 0393     		str	r3, [sp, #12]
+  38:Src/tim.c     **** 
+  39:Src/tim.c     ****   /* USER CODE BEGIN TIM16_Init 1 */
+  40:Src/tim.c     **** 
+  41:Src/tim.c     ****   /* USER CODE END TIM16_Init 1 */
+  42:Src/tim.c     ****   htim16.Instance = TIM16;
+  47              		.loc 1 42 3 is_stmt 1 view .LVU3
+  48              		.loc 1 42 19 is_stmt 0 view .LVU4
+  49 000e 1948     		ldr	r0, .L11
+  50 0010 194A     		ldr	r2, .L11+4
+  51 0012 0260     		str	r2, [r0]
+  43:Src/tim.c     ****   htim16.Init.Prescaler = 0;
+  52              		.loc 1 43 3 is_stmt 1 view .LVU5
+  53              		.loc 1 43 25 is_stmt 0 view .LVU6
+  54 0014 4360     		str	r3, [r0, #4]
+  44:Src/tim.c     ****   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
+  55              		.loc 1 44 3 is_stmt 1 view .LVU7
+  56              		.loc 1 44 27 is_stmt 0 view .LVU8
+  57 0016 8360     		str	r3, [r0, #8]
+  45:Src/tim.c     ****   htim16.Init.Period = 65535;
+  58              		.loc 1 45 3 is_stmt 1 view .LVU9
+  59              		.loc 1 45 22 is_stmt 0 view .LVU10
+  60 0018 4FF6FF72 		movw	r2, #65535
+  61 001c C260     		str	r2, [r0, #12]
+  46:Src/tim.c     ****   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  62              		.loc 1 46 3 is_stmt 1 view .LVU11
+  63              		.loc 1 46 29 is_stmt 0 view .LVU12
+  64 001e 0361     		str	r3, [r0, #16]
+  47:Src/tim.c     ****   htim16.Init.RepetitionCounter = 0;
+  65              		.loc 1 47 3 is_stmt 1 view .LVU13
+  66              		.loc 1 47 33 is_stmt 0 view .LVU14
+  67 0020 4361     		str	r3, [r0, #20]
+  48:Src/tim.c     ****   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 3
+
+
+  68              		.loc 1 48 3 is_stmt 1 view .LVU15
+  69              		.loc 1 48 33 is_stmt 0 view .LVU16
+  70 0022 8361     		str	r3, [r0, #24]
+  49:Src/tim.c     ****   if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
+  71              		.loc 1 49 3 is_stmt 1 view .LVU17
+  72              		.loc 1 49 7 is_stmt 0 view .LVU18
+  73 0024 FFF7FEFF 		bl	HAL_TIM_Base_Init
+  74              	.LVL0:
+  75              		.loc 1 49 6 view .LVU19
+  76 0028 B8B9     		cbnz	r0, .L7
+  77              	.L2:
+  50:Src/tim.c     ****   {
+  51:Src/tim.c     ****     Error_Handler();
+  52:Src/tim.c     ****   }
+  53:Src/tim.c     ****   if (HAL_TIM_IC_Init(&htim16) != HAL_OK)
+  78              		.loc 1 53 3 is_stmt 1 view .LVU20
+  79              		.loc 1 53 7 is_stmt 0 view .LVU21
+  80 002a 1248     		ldr	r0, .L11
+  81 002c FFF7FEFF 		bl	HAL_TIM_IC_Init
+  82              	.LVL1:
+  83              		.loc 1 53 6 view .LVU22
+  84 0030 B0B9     		cbnz	r0, .L8
+  85              	.L3:
+  54:Src/tim.c     ****   {
+  55:Src/tim.c     ****     Error_Handler();
+  56:Src/tim.c     ****   }
+  57:Src/tim.c     ****   sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  86              		.loc 1 57 3 is_stmt 1 view .LVU23
+  87              		.loc 1 57 24 is_stmt 0 view .LVU24
+  88 0032 0022     		movs	r2, #0
+  89 0034 0092     		str	r2, [sp]
+  58:Src/tim.c     ****   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  90              		.loc 1 58 3 is_stmt 1 view .LVU25
+  91              		.loc 1 58 25 is_stmt 0 view .LVU26
+  92 0036 0123     		movs	r3, #1
+  93 0038 0193     		str	r3, [sp, #4]
+  59:Src/tim.c     ****   sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+  94              		.loc 1 59 3 is_stmt 1 view .LVU27
+  95              		.loc 1 59 25 is_stmt 0 view .LVU28
+  96 003a 0292     		str	r2, [sp, #8]
+  60:Src/tim.c     ****   sConfigIC.ICFilter = 0;
+  97              		.loc 1 60 3 is_stmt 1 view .LVU29
+  98              		.loc 1 60 22 is_stmt 0 view .LVU30
+  99 003c 0392     		str	r2, [sp, #12]
+  61:Src/tim.c     ****   if (HAL_TIM_IC_ConfigChannel(&htim16, &sConfigIC, TIM_CHANNEL_1) != HAL_OK)
+ 100              		.loc 1 61 3 is_stmt 1 view .LVU31
+ 101              		.loc 1 61 7 is_stmt 0 view .LVU32
+ 102 003e 6946     		mov	r1, sp
+ 103 0040 0C48     		ldr	r0, .L11
+ 104 0042 FFF7FEFF 		bl	HAL_TIM_IC_ConfigChannel
+ 105              	.LVL2:
+ 106              		.loc 1 61 6 view .LVU33
+ 107 0046 70B9     		cbnz	r0, .L9
+ 108              	.L4:
+  62:Src/tim.c     ****   {
+  63:Src/tim.c     ****     Error_Handler();
+  64:Src/tim.c     ****   }
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 4
+
+
+  65:Src/tim.c     ****   if (HAL_TIMEx_TISelection(&htim16, TIM_TIM16_TI1_LSI, TIM_CHANNEL_1) != HAL_OK)
+ 109              		.loc 1 65 3 is_stmt 1 view .LVU34
+ 110              		.loc 1 65 7 is_stmt 0 view .LVU35
+ 111 0048 0022     		movs	r2, #0
+ 112 004a 0621     		movs	r1, #6
+ 113 004c 0948     		ldr	r0, .L11
+ 114 004e FFF7FEFF 		bl	HAL_TIMEx_TISelection
+ 115              	.LVL3:
+ 116              		.loc 1 65 6 view .LVU36
+ 117 0052 58B9     		cbnz	r0, .L10
+ 118              	.L1:
+  66:Src/tim.c     ****   {
+  67:Src/tim.c     ****     Error_Handler();
+  68:Src/tim.c     ****   }
+  69:Src/tim.c     ****   /* USER CODE BEGIN TIM16_Init 2 */
+  70:Src/tim.c     **** 
+  71:Src/tim.c     ****   /* USER CODE END TIM16_Init 2 */
+  72:Src/tim.c     **** 
+  73:Src/tim.c     **** }
+ 119              		.loc 1 73 1 view .LVU37
+ 120 0054 05B0     		add	sp, sp, #20
+ 121              	.LCFI2:
+ 122              		.cfi_remember_state
+ 123              		.cfi_def_cfa_offset 4
+ 124              		@ sp needed
+ 125 0056 5DF804FB 		ldr	pc, [sp], #4
+ 126              	.L7:
+ 127              	.LCFI3:
+ 128              		.cfi_restore_state
+  51:Src/tim.c     ****   }
+ 129              		.loc 1 51 5 is_stmt 1 view .LVU38
+ 130 005a FFF7FEFF 		bl	Error_Handler
+ 131              	.LVL4:
+ 132 005e E4E7     		b	.L2
+ 133              	.L8:
+  55:Src/tim.c     ****   }
+ 134              		.loc 1 55 5 view .LVU39
+ 135 0060 FFF7FEFF 		bl	Error_Handler
+ 136              	.LVL5:
+ 137 0064 E5E7     		b	.L3
+ 138              	.L9:
+  63:Src/tim.c     ****   }
+ 139              		.loc 1 63 5 view .LVU40
+ 140 0066 FFF7FEFF 		bl	Error_Handler
+ 141              	.LVL6:
+ 142 006a EDE7     		b	.L4
+ 143              	.L10:
+  67:Src/tim.c     ****   }
+ 144              		.loc 1 67 5 view .LVU41
+ 145 006c FFF7FEFF 		bl	Error_Handler
+ 146              	.LVL7:
+ 147              		.loc 1 73 1 is_stmt 0 view .LVU42
+ 148 0070 F0E7     		b	.L1
+ 149              	.L12:
+ 150 0072 00BF     		.align	2
+ 151              	.L11:
+ 152 0074 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 5
+
+
+ 153 0078 00440140 		.word	1073824768
+ 154              		.cfi_endproc
+ 155              	.LFE132:
+ 157              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
+ 158              		.align	1
+ 159              		.global	HAL_TIM_Base_MspInit
+ 160              		.syntax unified
+ 161              		.thumb
+ 162              		.thumb_func
+ 164              	HAL_TIM_Base_MspInit:
+ 165              	.LVL8:
+ 166              	.LFB133:
+  74:Src/tim.c     **** 
+  75:Src/tim.c     **** void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
+  76:Src/tim.c     **** {
+ 167              		.loc 1 76 1 is_stmt 1 view -0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 8
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+  77:Src/tim.c     **** 
+  78:Src/tim.c     ****   if(tim_baseHandle->Instance==TIM16)
+ 172              		.loc 1 78 3 view .LVU44
+ 173              		.loc 1 78 20 is_stmt 0 view .LVU45
+ 174 0000 0268     		ldr	r2, [r0]
+ 175              		.loc 1 78 5 view .LVU46
+ 176 0002 094B     		ldr	r3, .L20
+ 177 0004 9A42     		cmp	r2, r3
+ 178 0006 00D0     		beq	.L19
+ 179 0008 7047     		bx	lr
+ 180              	.L19:
+  76:Src/tim.c     **** 
+ 181              		.loc 1 76 1 view .LVU47
+ 182 000a 82B0     		sub	sp, sp, #8
+ 183              	.LCFI4:
+ 184              		.cfi_def_cfa_offset 8
+  79:Src/tim.c     ****   {
+  80:Src/tim.c     ****   /* USER CODE BEGIN TIM16_MspInit 0 */
+  81:Src/tim.c     **** 
+  82:Src/tim.c     ****   /* USER CODE END TIM16_MspInit 0 */
+  83:Src/tim.c     ****     /* TIM16 clock enable */
+  84:Src/tim.c     ****     __HAL_RCC_TIM16_CLK_ENABLE();
+ 185              		.loc 1 84 5 is_stmt 1 view .LVU48
+ 186              	.LBB2:
+ 187              		.loc 1 84 5 view .LVU49
+ 188              		.loc 1 84 5 view .LVU50
+ 189 000c 03F54C43 		add	r3, r3, #52224
+ 190 0010 1A6E     		ldr	r2, [r3, #96]
+ 191 0012 42F40032 		orr	r2, r2, #131072
+ 192 0016 1A66     		str	r2, [r3, #96]
+ 193              		.loc 1 84 5 view .LVU51
+ 194 0018 1B6E     		ldr	r3, [r3, #96]
+ 195 001a 03F40033 		and	r3, r3, #131072
+ 196 001e 0193     		str	r3, [sp, #4]
+ 197              		.loc 1 84 5 view .LVU52
+ 198 0020 019B     		ldr	r3, [sp, #4]
+ 199              	.LBE2:
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 6
+
+
+ 200              		.loc 1 84 5 view .LVU53
+  85:Src/tim.c     ****   /* USER CODE BEGIN TIM16_MspInit 1 */
+  86:Src/tim.c     **** 
+  87:Src/tim.c     ****   /* USER CODE END TIM16_MspInit 1 */
+  88:Src/tim.c     ****   }
+  89:Src/tim.c     **** }
+ 201              		.loc 1 89 1 is_stmt 0 view .LVU54
+ 202 0022 02B0     		add	sp, sp, #8
+ 203              	.LCFI5:
+ 204              		.cfi_def_cfa_offset 0
+ 205              		@ sp needed
+ 206 0024 7047     		bx	lr
+ 207              	.L21:
+ 208 0026 00BF     		.align	2
+ 209              	.L20:
+ 210 0028 00440140 		.word	1073824768
+ 211              		.cfi_endproc
+ 212              	.LFE133:
+ 214              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
+ 215              		.align	1
+ 216              		.global	HAL_TIM_Base_MspDeInit
+ 217              		.syntax unified
+ 218              		.thumb
+ 219              		.thumb_func
+ 221              	HAL_TIM_Base_MspDeInit:
+ 222              	.LVL9:
+ 223              	.LFB134:
+  90:Src/tim.c     **** 
+  91:Src/tim.c     **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
+  92:Src/tim.c     **** {
+ 224              		.loc 1 92 1 is_stmt 1 view -0
+ 225              		.cfi_startproc
+ 226              		@ args = 0, pretend = 0, frame = 0
+ 227              		@ frame_needed = 0, uses_anonymous_args = 0
+ 228              		@ link register save eliminated.
+  93:Src/tim.c     **** 
+  94:Src/tim.c     ****   if(tim_baseHandle->Instance==TIM16)
+ 229              		.loc 1 94 3 view .LVU56
+ 230              		.loc 1 94 20 is_stmt 0 view .LVU57
+ 231 0000 0268     		ldr	r2, [r0]
+ 232              		.loc 1 94 5 view .LVU58
+ 233 0002 054B     		ldr	r3, .L25
+ 234 0004 9A42     		cmp	r2, r3
+ 235 0006 00D0     		beq	.L24
+ 236              	.L22:
+  95:Src/tim.c     ****   {
+  96:Src/tim.c     ****   /* USER CODE BEGIN TIM16_MspDeInit 0 */
+  97:Src/tim.c     **** 
+  98:Src/tim.c     ****   /* USER CODE END TIM16_MspDeInit 0 */
+  99:Src/tim.c     ****     /* Peripheral clock disable */
+ 100:Src/tim.c     ****     __HAL_RCC_TIM16_CLK_DISABLE();
+ 101:Src/tim.c     ****   /* USER CODE BEGIN TIM16_MspDeInit 1 */
+ 102:Src/tim.c     **** 
+ 103:Src/tim.c     ****   /* USER CODE END TIM16_MspDeInit 1 */
+ 104:Src/tim.c     ****   }
+ 105:Src/tim.c     **** }
+ 237              		.loc 1 105 1 view .LVU59
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 7
+
+
+ 238 0008 7047     		bx	lr
+ 239              	.L24:
+ 100:Src/tim.c     ****   /* USER CODE BEGIN TIM16_MspDeInit 1 */
+ 240              		.loc 1 100 5 is_stmt 1 view .LVU60
+ 241 000a 044A     		ldr	r2, .L25+4
+ 242 000c 136E     		ldr	r3, [r2, #96]
+ 243 000e 23F40033 		bic	r3, r3, #131072
+ 244 0012 1366     		str	r3, [r2, #96]
+ 245              		.loc 1 105 1 is_stmt 0 view .LVU61
+ 246 0014 F8E7     		b	.L22
+ 247              	.L26:
+ 248 0016 00BF     		.align	2
+ 249              	.L25:
+ 250 0018 00440140 		.word	1073824768
+ 251 001c 00100240 		.word	1073876992
+ 252              		.cfi_endproc
+ 253              	.LFE134:
+ 255              		.global	htim16
+ 256              		.section	.bss.htim16,"aw",%nobits
+ 257              		.align	2
+ 258              		.set	.LANCHOR0,. + 0
+ 261              	htim16:
+ 262 0000 00000000 		.space	76
+ 262      00000000 
+ 262      00000000 
+ 262      00000000 
+ 262      00000000 
+ 263              		.text
+ 264              	.Letext0:
+ 265              		.file 2 "d:\\program files\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_defa
+ 266              		.file 3 "d:\\program files\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h
+ 267              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 268              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+ 269              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h"
+ 270              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h"
+ 271              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h"
+ 272              		.file 9 "Inc/main.h"
+ 273              		.file 10 "Inc/tim.h"
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tim.c
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:20     .text.MX_TIM16_Init:00000000 $t
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:26     .text.MX_TIM16_Init:00000000 MX_TIM16_Init
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:152    .text.MX_TIM16_Init:00000074 $d
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:158    .text.HAL_TIM_Base_MspInit:00000000 $t
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:164    .text.HAL_TIM_Base_MspInit:00000000 HAL_TIM_Base_MspInit
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:210    .text.HAL_TIM_Base_MspInit:00000028 $d
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:215    .text.HAL_TIM_Base_MspDeInit:00000000 $t
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:221    .text.HAL_TIM_Base_MspDeInit:00000000 HAL_TIM_Base_MspDeInit
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:250    .text.HAL_TIM_Base_MspDeInit:00000018 $d
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:261    .bss.htim16:00000000 htim16
+C:\Users\zhangge\AppData\Local\Temp\ccNUPEHd.s:257    .bss.htim16:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_TIM_Base_Init
+HAL_TIM_IC_Init
+HAL_TIM_IC_ConfigChannel
+HAL_TIMEx_TISelection
+Error_Handler

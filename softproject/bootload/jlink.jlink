@@ -1,0 +1,40 @@
+h
+loadfile build/G473ZET6.bin
+r
+qc
+h
+loadfile build/G473ZET6.bin
+r
+qc
+h
+loadfile build/G473ZET6.bin
+r
+qc
+h
+loadfile build/G473ZET6.bin
+r
+qc
+h
+loadfile build/G473ZET6.bin
+r
+qc
+h
+loadfile build/G473ZET6.bin
+r
+qc
+h
+loadfile build/G473ZET6.bin
+r
+qc
+"h" 
+"loadfile" build/G473ZET6.bin 
+"r" 
+"qc" 
+"h" 
+"loadfile" build/G473ZET6.bin 
+"r" 
+"qc" 
+"h" 
+"loadfile" build/G473ZET6.bin 
+"r" 
+"qc" 

@@ -1,0 +1,169 @@
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"iwdg.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MX_IWDG_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_IWDG_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_IWDG_Init:
+  27              	.LFB132:
+  28              		.file 1 "Src/iwdg.c"
+   1:Src/iwdg.c    **** /* USER CODE BEGIN Header */
+   2:Src/iwdg.c    **** /**
+   3:Src/iwdg.c    ****   ******************************************************************************
+   4:Src/iwdg.c    ****   * @file    iwdg.c
+   5:Src/iwdg.c    ****   * @brief   This file provides code for the configuration
+   6:Src/iwdg.c    ****   *          of the IWDG instances.
+   7:Src/iwdg.c    ****   ******************************************************************************
+   8:Src/iwdg.c    ****   * @attention
+   9:Src/iwdg.c    ****   *
+  10:Src/iwdg.c    ****   * Copyright (c) 2023 STMicroelectronics.
+  11:Src/iwdg.c    ****   * All rights reserved.
+  12:Src/iwdg.c    ****   *
+  13:Src/iwdg.c    ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Src/iwdg.c    ****   * in the root directory of this software component.
+  15:Src/iwdg.c    ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Src/iwdg.c    ****   *
+  17:Src/iwdg.c    ****   ******************************************************************************
+  18:Src/iwdg.c    ****   */
+  19:Src/iwdg.c    **** /* USER CODE END Header */
+  20:Src/iwdg.c    **** /* Includes ------------------------------------------------------------------*/
+  21:Src/iwdg.c    **** #include "iwdg.h"
+  22:Src/iwdg.c    **** 
+  23:Src/iwdg.c    **** /* USER CODE BEGIN 0 */
+  24:Src/iwdg.c    **** 
+  25:Src/iwdg.c    **** /* USER CODE END 0 */
+  26:Src/iwdg.c    **** 
+  27:Src/iwdg.c    **** IWDG_HandleTypeDef hiwdg;
+  28:Src/iwdg.c    **** 
+  29:Src/iwdg.c    **** /* IWDG init function */
+  30:Src/iwdg.c    **** void MX_IWDG_Init(void)
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s 			page 2
+
+
+  31:Src/iwdg.c    **** {
+  29              		.loc 1 31 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  32:Src/iwdg.c    **** 
+  33:Src/iwdg.c    ****   /* USER CODE BEGIN IWDG_Init 0 */
+  34:Src/iwdg.c    **** 
+  35:Src/iwdg.c    ****   /* USER CODE END IWDG_Init 0 */
+  36:Src/iwdg.c    **** 
+  37:Src/iwdg.c    ****   /* USER CODE BEGIN IWDG_Init 1 */
+  38:Src/iwdg.c    **** 
+  39:Src/iwdg.c    ****   /* USER CODE END IWDG_Init 1 */
+  40:Src/iwdg.c    ****   hiwdg.Instance = IWDG;
+  38              		.loc 1 40 3 view .LVU1
+  39              		.loc 1 40 18 is_stmt 0 view .LVU2
+  40 0002 0848     		ldr	r0, .L5
+  41 0004 084B     		ldr	r3, .L5+4
+  42 0006 0360     		str	r3, [r0]
+  41:Src/iwdg.c    ****   hiwdg.Init.Prescaler = IWDG_PRESCALER_32;
+  43              		.loc 1 41 3 is_stmt 1 view .LVU3
+  44              		.loc 1 41 24 is_stmt 0 view .LVU4
+  45 0008 0323     		movs	r3, #3
+  46 000a 4360     		str	r3, [r0, #4]
+  42:Src/iwdg.c    ****   hiwdg.Init.Window = 64;
+  47              		.loc 1 42 3 is_stmt 1 view .LVU5
+  48              		.loc 1 42 21 is_stmt 0 view .LVU6
+  49 000c 4023     		movs	r3, #64
+  50 000e C360     		str	r3, [r0, #12]
+  43:Src/iwdg.c    ****   hiwdg.Init.Reload = 625;
+  51              		.loc 1 43 3 is_stmt 1 view .LVU7
+  52              		.loc 1 43 21 is_stmt 0 view .LVU8
+  53 0010 40F27123 		movw	r3, #625
+  54 0014 8360     		str	r3, [r0, #8]
+  44:Src/iwdg.c    ****   if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+  55              		.loc 1 44 3 is_stmt 1 view .LVU9
+  56              		.loc 1 44 7 is_stmt 0 view .LVU10
+  57 0016 FFF7FEFF 		bl	HAL_IWDG_Init
+  58              	.LVL0:
+  59              		.loc 1 44 6 view .LVU11
+  60 001a 00B9     		cbnz	r0, .L4
+  61              	.L1:
+  45:Src/iwdg.c    ****   {
+  46:Src/iwdg.c    ****     Error_Handler();
+  47:Src/iwdg.c    ****   }
+  48:Src/iwdg.c    ****   /* USER CODE BEGIN IWDG_Init 2 */
+  49:Src/iwdg.c    **** 
+  50:Src/iwdg.c    ****   /* USER CODE END IWDG_Init 2 */
+  51:Src/iwdg.c    **** 
+  52:Src/iwdg.c    **** }
+  62              		.loc 1 52 1 view .LVU12
+  63 001c 08BD     		pop	{r3, pc}
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s 			page 3
+
+
+  64              	.L4:
+  46:Src/iwdg.c    ****   }
+  65              		.loc 1 46 5 is_stmt 1 view .LVU13
+  66 001e FFF7FEFF 		bl	Error_Handler
+  67              	.LVL1:
+  68              		.loc 1 52 1 is_stmt 0 view .LVU14
+  69 0022 FBE7     		b	.L1
+  70              	.L6:
+  71              		.align	2
+  72              	.L5:
+  73 0024 00000000 		.word	.LANCHOR0
+  74 0028 00300040 		.word	1073754112
+  75              		.cfi_endproc
+  76              	.LFE132:
+  78              		.global	hiwdg
+  79              		.section	.bss.hiwdg,"aw",%nobits
+  80              		.align	2
+  81              		.set	.LANCHOR0,. + 0
+  84              	hiwdg:
+  85 0000 00000000 		.space	16
+  85      00000000 
+  85      00000000 
+  85      00000000 
+  86              		.text
+  87              	.Letext0:
+  88              		.file 2 "d:\\program files\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_defa
+  89              		.file 3 "d:\\program files\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h
+  90              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+  91              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_iwdg.h"
+  92              		.file 6 "Inc/main.h"
+  93              		.file 7 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
+  94              		.file 8 "Inc/iwdg.h"
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 iwdg.c
+C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s:20     .text.MX_IWDG_Init:00000000 $t
+C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s:26     .text.MX_IWDG_Init:00000000 MX_IWDG_Init
+C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s:73     .text.MX_IWDG_Init:00000024 $d
+C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s:84     .bss.hiwdg:00000000 hiwdg
+C:\Users\zhangge\AppData\Local\Temp\cc72yTyw.s:80     .bss.hiwdg:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_IWDG_Init
+Error_Handler

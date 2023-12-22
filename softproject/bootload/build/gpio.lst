@@ -1,0 +1,225 @@
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"gpio.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_GPIO_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_GPIO_Init:
+  27              	.LFB132:
+  28              		.file 1 "Src/gpio.c"
+   1:Src/gpio.c    **** /* USER CODE BEGIN Header */
+   2:Src/gpio.c    **** /**
+   3:Src/gpio.c    ****   ******************************************************************************
+   4:Src/gpio.c    ****   * @file    gpio.c
+   5:Src/gpio.c    ****   * @brief   This file provides code for the configuration
+   6:Src/gpio.c    ****   *          of all used GPIO pins.
+   7:Src/gpio.c    ****   ******************************************************************************
+   8:Src/gpio.c    ****   * @attention
+   9:Src/gpio.c    ****   *
+  10:Src/gpio.c    ****   * Copyright (c) 2023 STMicroelectronics.
+  11:Src/gpio.c    ****   * All rights reserved.
+  12:Src/gpio.c    ****   *
+  13:Src/gpio.c    ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Src/gpio.c    ****   * in the root directory of this software component.
+  15:Src/gpio.c    ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Src/gpio.c    ****   *
+  17:Src/gpio.c    ****   ******************************************************************************
+  18:Src/gpio.c    ****   */
+  19:Src/gpio.c    **** /* USER CODE END Header */
+  20:Src/gpio.c    **** 
+  21:Src/gpio.c    **** /* Includes ------------------------------------------------------------------*/
+  22:Src/gpio.c    **** #include "gpio.h"
+  23:Src/gpio.c    **** 
+  24:Src/gpio.c    **** /* USER CODE BEGIN 0 */
+  25:Src/gpio.c    **** 
+  26:Src/gpio.c    **** /* USER CODE END 0 */
+  27:Src/gpio.c    **** 
+  28:Src/gpio.c    **** /*----------------------------------------------------------------------------*/
+  29:Src/gpio.c    **** /* Configure GPIO                                                             */
+  30:Src/gpio.c    **** /*----------------------------------------------------------------------------*/
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s 			page 2
+
+
+  31:Src/gpio.c    **** /* USER CODE BEGIN 1 */
+  32:Src/gpio.c    **** 
+  33:Src/gpio.c    **** /* USER CODE END 1 */
+  34:Src/gpio.c    **** 
+  35:Src/gpio.c    **** /** Configure pins as
+  36:Src/gpio.c    ****         * Analog
+  37:Src/gpio.c    ****         * Input
+  38:Src/gpio.c    ****         * Output
+  39:Src/gpio.c    ****         * EVENT_OUT
+  40:Src/gpio.c    ****         * EXTI
+  41:Src/gpio.c    **** */
+  42:Src/gpio.c    **** void MX_GPIO_Init(void)
+  43:Src/gpio.c    **** {
+  29              		.loc 1 43 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 32
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 30B5     		push	{r4, r5, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 12
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39 0002 89B0     		sub	sp, sp, #36
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 48
+  44:Src/gpio.c    **** 
+  45:Src/gpio.c    ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  42              		.loc 1 45 3 view .LVU1
+  43              		.loc 1 45 20 is_stmt 0 view .LVU2
+  44 0004 0024     		movs	r4, #0
+  45 0006 0394     		str	r4, [sp, #12]
+  46 0008 0494     		str	r4, [sp, #16]
+  47 000a 0594     		str	r4, [sp, #20]
+  48 000c 0694     		str	r4, [sp, #24]
+  49 000e 0794     		str	r4, [sp, #28]
+  46:Src/gpio.c    **** 
+  47:Src/gpio.c    ****   /* GPIO Ports Clock Enable */
+  48:Src/gpio.c    ****   __HAL_RCC_GPIOF_CLK_ENABLE();
+  50              		.loc 1 48 3 is_stmt 1 view .LVU3
+  51              	.LBB2:
+  52              		.loc 1 48 3 view .LVU4
+  53              		.loc 1 48 3 view .LVU5
+  54 0010 164B     		ldr	r3, .L3
+  55 0012 DA6C     		ldr	r2, [r3, #76]
+  56 0014 42F02002 		orr	r2, r2, #32
+  57 0018 DA64     		str	r2, [r3, #76]
+  58              		.loc 1 48 3 view .LVU6
+  59 001a DA6C     		ldr	r2, [r3, #76]
+  60 001c 02F02002 		and	r2, r2, #32
+  61 0020 0092     		str	r2, [sp]
+  62              		.loc 1 48 3 view .LVU7
+  63 0022 009A     		ldr	r2, [sp]
+  64              	.LBE2:
+  65              		.loc 1 48 3 view .LVU8
+  49:Src/gpio.c    ****   __HAL_RCC_GPIOE_CLK_ENABLE();
+  66              		.loc 1 49 3 view .LVU9
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s 			page 3
+
+
+  67              	.LBB3:
+  68              		.loc 1 49 3 view .LVU10
+  69              		.loc 1 49 3 view .LVU11
+  70 0024 DA6C     		ldr	r2, [r3, #76]
+  71 0026 42F01002 		orr	r2, r2, #16
+  72 002a DA64     		str	r2, [r3, #76]
+  73              		.loc 1 49 3 view .LVU12
+  74 002c DA6C     		ldr	r2, [r3, #76]
+  75 002e 02F01002 		and	r2, r2, #16
+  76 0032 0192     		str	r2, [sp, #4]
+  77              		.loc 1 49 3 view .LVU13
+  78 0034 019A     		ldr	r2, [sp, #4]
+  79              	.LBE3:
+  80              		.loc 1 49 3 view .LVU14
+  50:Src/gpio.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  81              		.loc 1 50 3 view .LVU15
+  82              	.LBB4:
+  83              		.loc 1 50 3 view .LVU16
+  84              		.loc 1 50 3 view .LVU17
+  85 0036 DA6C     		ldr	r2, [r3, #76]
+  86 0038 42F00102 		orr	r2, r2, #1
+  87 003c DA64     		str	r2, [r3, #76]
+  88              		.loc 1 50 3 view .LVU18
+  89 003e DB6C     		ldr	r3, [r3, #76]
+  90 0040 03F00103 		and	r3, r3, #1
+  91 0044 0293     		str	r3, [sp, #8]
+  92              		.loc 1 50 3 view .LVU19
+  93 0046 029B     		ldr	r3, [sp, #8]
+  94              	.LBE4:
+  95              		.loc 1 50 3 view .LVU20
+  51:Src/gpio.c    **** 
+  52:Src/gpio.c    ****   /*Configure GPIO pin Output Level */
+  53:Src/gpio.c    ****   HAL_GPIO_WritePin(LED01_GPIO_Port, LED01_Pin, GPIO_PIN_RESET);
+  96              		.loc 1 53 3 view .LVU21
+  97 0048 094D     		ldr	r5, .L3+4
+  98 004a 2246     		mov	r2, r4
+  99 004c 8021     		movs	r1, #128
+ 100 004e 2846     		mov	r0, r5
+ 101 0050 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 102              	.LVL0:
+  54:Src/gpio.c    **** 
+  55:Src/gpio.c    ****   /*Configure GPIO pin : PtPin */
+  56:Src/gpio.c    ****   GPIO_InitStruct.Pin = LED01_Pin;
+ 103              		.loc 1 56 3 view .LVU22
+ 104              		.loc 1 56 23 is_stmt 0 view .LVU23
+ 105 0054 8023     		movs	r3, #128
+ 106 0056 0393     		str	r3, [sp, #12]
+  57:Src/gpio.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 107              		.loc 1 57 3 is_stmt 1 view .LVU24
+ 108              		.loc 1 57 24 is_stmt 0 view .LVU25
+ 109 0058 0123     		movs	r3, #1
+ 110 005a 0493     		str	r3, [sp, #16]
+  58:Src/gpio.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 111              		.loc 1 58 3 is_stmt 1 view .LVU26
+ 112              		.loc 1 58 24 is_stmt 0 view .LVU27
+ 113 005c 0594     		str	r4, [sp, #20]
+  59:Src/gpio.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s 			page 4
+
+
+ 114              		.loc 1 59 3 is_stmt 1 view .LVU28
+ 115              		.loc 1 59 25 is_stmt 0 view .LVU29
+ 116 005e 0694     		str	r4, [sp, #24]
+  60:Src/gpio.c    ****   HAL_GPIO_Init(LED01_GPIO_Port, &GPIO_InitStruct);
+ 117              		.loc 1 60 3 is_stmt 1 view .LVU30
+ 118 0060 03A9     		add	r1, sp, #12
+ 119 0062 2846     		mov	r0, r5
+ 120 0064 FFF7FEFF 		bl	HAL_GPIO_Init
+ 121              	.LVL1:
+  61:Src/gpio.c    **** 
+  62:Src/gpio.c    **** }
+ 122              		.loc 1 62 1 is_stmt 0 view .LVU31
+ 123 0068 09B0     		add	sp, sp, #36
+ 124              	.LCFI2:
+ 125              		.cfi_def_cfa_offset 12
+ 126              		@ sp needed
+ 127 006a 30BD     		pop	{r4, r5, pc}
+ 128              	.L4:
+ 129              		.align	2
+ 130              	.L3:
+ 131 006c 00100240 		.word	1073876992
+ 132 0070 00100048 		.word	1207963648
+ 133              		.cfi_endproc
+ 134              	.LFE132:
+ 136              		.text
+ 137              	.Letext0:
+ 138              		.file 2 "d:\\program files\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_defa
+ 139              		.file 3 "d:\\program files\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.h
+ 140              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g473xx.h"
+ 141              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h"
+ARM GAS  C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gpio.c
+C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s:20     .text.MX_GPIO_Init:00000000 $t
+C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s:26     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\zhangge\AppData\Local\Temp\ccIsdNmV.s:131    .text.MX_GPIO_Init:0000006c $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
